@@ -1,8 +1,8 @@
 var {expect} = require('chai');
 var radioPage = require('../../pageObjects/radioPage.js');
-
+/*
 describe('Radio test page:', function() {
-/*	
+	
 	before(function () {
 		browser.url("http://www.abc.net.au/radionational/");
     });  
@@ -29,6 +29,4 @@ describe('Radio test page:', function() {
 
     after(function () {
     }); 
-*/
-
 });

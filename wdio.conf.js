@@ -10,7 +10,8 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+      //  './test/specs/**/*.js'
+      './test/specs/jsonTest.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -42,7 +43,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'firefox'
     }],
@@ -146,8 +147,9 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+   /* onPrepare: function (config, capabilities) {
+        var env = envar("env") || "test";
+     },*/
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
