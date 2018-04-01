@@ -28,7 +28,7 @@ describe('Radio test page:', function() {
     });
 
     after(function () {
-        browser.close();
     }); 
 */
+
 });
