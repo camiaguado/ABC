@@ -1,25 +1,25 @@
 # ABC - QA ASSESSMENT
 Automation test framework using webdriver.io
 
-##Getting started
-###Prerequisites
+## Getting started
+### Prerequisites
  - You have installed [Node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm)
  
-###Installation
-####Clone github repository
+### Installation
+#### Clone github repository
 ```bash
 git clone https://github.com/camiaguado/ABC.git
 ```
-####Download dependencies
+#### Download dependencies
 ```bash
 npm install
 ```
-####Run tests
+#### Run tests
 ```bash
 npm test
 ```
 
-###Diferent enviorments
+### Diferents enviorments
 - You could run JSONs tests in differents enviorments running this commands:
 <table>
   <tr>
