@@ -4,7 +4,7 @@ var rest = require('urllib-sync').request;
 var envar = require('envar');
 
 describe('Json tests:', function() {
-    var env = envar("env") || "prod";
+/*    var env = envar("env") || "prod";
     if(env === "prod"){
         url = "http://program.abcradio.net.au";
     }else if(env === "test"){
@@ -12,10 +12,27 @@ describe('Json tests:', function() {
          }else if(env === "stage"){
             url = "http://staging-program.abcradio.net.au";
                 }
+*/
+    
 
     it('Verify the key/value pairs', function() {
+ //       var url = enviorment();
+        var url;
+               
+        var env = envar("env") || "prod";
+        switch(env){
+              case 'prod':
+                url = "http://program.abcradio.net.au";
+                break;
+              case 'test':
+                url = "http://test-program.abcradio.net.au";
+                break;
+              case 'stage':
+                url = "http://staging-program.abcradio.net.au";
+                break;
+        }
         var json = rest(url + "/api/v1/programs/ppJj0E8g2R.json", {method: "GET", dataType: 'json'});
-        
+
         assert.equal(json.data.entity, "Program", "<entity> not match");
         assert.equal(json.data.arid, "ppJj0E8g2R", "<arid> not match");
         assert.equal(json.data.mini_synopsis, "Mornings presents local news and issues, talking with everyday folk about current issues", "<mini_synopsis> not match");

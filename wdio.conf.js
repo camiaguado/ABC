@@ -1,3 +1,5 @@
+var envar = require('envar');
+
 exports.config = {
     
     //
@@ -11,7 +13,7 @@ exports.config = {
     //
     specs: [
       //  './test/specs/**/*.js'
-      './test/specs/jsonTest.js'
+      './test/specs/gallery.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -149,7 +151,27 @@ exports.config = {
      */
    /* onPrepare: function (config, capabilities) {
         var env = envar("env") || "test";
-     },*/
+     },
+
+     onPrepare: function(){
+
+        enviorment = function(){
+            var env = envar("env") || "prod";
+            switch(env){
+                  case 'prod':
+                    url = "http://program.abcradio.net.au";
+                    break;
+                  case 'test':
+                    url = "http://test-program.abcradio.net.au";
+                    break;
+                  case 'stage':
+                    url = "http://staging-program.abcradio.net.au";
+                    break;
+            }
+            return url;
+        }
+}
+*/
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.

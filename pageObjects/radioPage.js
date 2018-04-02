@@ -13,9 +13,12 @@ var radioPage = Object.create(page, {
         while((browser.isVisible("//ul[@class='at-a-glance']//li["+i+"]")) == false){
               this.rightArrowBtn.click();
           }
-          browser.click("//ul[@class='at-a-glance']//li["+i+"]");
+        browser.click("#content > div.section.promo > div > div > div.on-air > ul > li:nth-child("+i+") > a");
         }},
-  
+  lastProgram: { get: function(){ 
+        var i = (this.programGuide.length)-1;
+        return $("#content > div.section.promo > div > div > div.on-air > ul > li:nth-child("+i+") > a > div > div.program");
+        }},
 
   inputSearch: { get: function () { return $('#search-simple-input-query'); } },	
   searchButton: { get: function () { return $('#search-simple-input-submit'); } },
