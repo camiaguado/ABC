@@ -1,8 +1,8 @@
 var {expect} = require('chai');
-var videoPage = require('../../pageObjects/videoPage.js');
+var videoPage = require('../../pageObjects/newsPage.js');
 
 
-describe('News home page:', function() {
+describe('Video test:', function() {
 	
 	before(function () {
 		browser.url("http://www.abc.net.au/news/2017-02-09/weatherill-promises-to-intervene-dramatically/8254908");  

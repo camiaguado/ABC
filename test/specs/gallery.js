@@ -1,5 +1,5 @@
 var {expect} = require('chai');
-var galleryPage = require('../../pageObjects/galleryPage.js');
+var galleryPage = require('../../pageObjects/newsPage.js');
 
 
 describe('Gallery page:', function() {
@@ -11,7 +11,7 @@ describe('Gallery page:', function() {
 
     it('Images loads successfuly', function() {
         galleryPage.gallery.waitForExist(3000);
-        expect(galleryPage.galleryClass).equal('lslide loaded active');        
+        expect(galleryPage.galleryClass).include('active');        
     });
 
     after(function () {

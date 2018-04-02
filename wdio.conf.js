@@ -13,7 +13,6 @@ exports.config = {
     //
     specs: [
         './test/specs/**/*.js'
-      //'./test/specs/radio.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -132,7 +131,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 80000
     }
 
     

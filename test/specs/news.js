@@ -1,7 +1,5 @@
 var {expect} = require('chai');
 var newsPage = require('../../pageObjects/newsPage.js');
-var justInPage = require('../../pageObjects/justInPage.js');
-
 
 describe('News home page:', function() {
 	
@@ -25,13 +23,14 @@ describe('News home page:', function() {
         expect(browser.getUrl()).equal("http://www.abc.net.au/news/justin/");
     });
 
-    it('Content per articule justin page', function() {
-        for (var i=1; i<=justInPage.articlesSize; i++){
-            expect(justInPage.newsTitle(i)).to.be.true;
-            expect(justInPage.newsText(i)).to.be.true;
+    it('Verify content per articule justin page', function() {
+        for (var i=1; i<=newsPage.articlesSize; i++){
+            expect(newsPage.newsTitle(i)).to.be.true;
+            expect(newsPage.newsText(i)).to.be.true;
          }   
     });
 
     after(function () {
     }); 
+
 });

@@ -6,6 +6,7 @@ var radioPage = Object.create(page, {
   programsButtonClick: { value: function() { this.programsButton.click(); }},
 	programMenu: { get: function () { return $("#rn-programindex > li:nth-child(2) a"); } }, 
   programMenuClick: { value: function() { this.programMenu.click(); }},
+  
   programPageHeader: { get: function() { return $("#content > div.main.c75l > div > h2")}},
 	programGuide: { get: function () { return $$(".at-a-glance li"); } },
 	rightArrowBtn: { get: function () { return $('#right-arrow'); } },
@@ -27,15 +28,19 @@ var radioPage = Object.create(page, {
 	resultView: {get: function(){ return $("#content > div.main.c75l > div > div.ct-search-header > p:nth-child(1) > em");}},              
   searchResult:{ value: function() { return this.resultView.getText(); }},   
 
+//Social media:
   facebookBtn: { get: function() { return $('//div[@class="fb-share-button fb_iframe_widget"]'); }},
   facebookClick: { value: function(){ this.facebookBtn.click(); }}, 
   facebookPopUp: { get: function(){}},
   twitterBtn: { get: function() { return $('//iframe[@id="twitter-widget-0"]');}}, 
   twitterClick: { value: function(){ this.twitterBtn.click();}},
-
   downloadBtn: { get: function() { return $('#content > div.main.c75l > div > div > div.ct-meta-details > ul > li > a'); }},
   downloadClick: { value: function(){ this.downloadBtn.click(); }},
   mediaContent: { get: function() { return $('body > video'); }},
+
+//Audio:
+  statusBar: { get: function(){ return $('#player > div > div.columns.small-2.medium-1.large-1 > span')}},
+  audioStatus: {get: function(){ return this.statusBar.getText();}}
 });
 
 module.exports = radioPage;
