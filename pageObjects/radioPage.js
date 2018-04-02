@@ -39,8 +39,9 @@ var radioPage = Object.create(page, {
   mediaContent: { get: function() { return $('body > video'); }},
 
 //Audio:
-  statusBar: { get: function(){ return $('#player > div > div.columns.small-2.medium-1.large-1 > span')}},
-  audioStatus: {get: function(){ return this.statusBar.getText();}}
+  statusBar: { get: function(){ return $('#player > div > div.columns.small-2.medium-1.large-1 > span');}},
+  audioStatus: {get: function(){ return this.statusBar.getText();}},
+  downloadBtn: {get: function(){ return $('#content > div.main.c75l > div > div > div.ct-meta-details > ul > li > a');}}
 });
 
 module.exports = radioPage;

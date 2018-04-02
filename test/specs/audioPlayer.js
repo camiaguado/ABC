@@ -5,10 +5,11 @@ describe('Audio Player', function() {
  
     before(function () {
         browser.url("http://radio.abc.net.au/programitem/perDaAW7rD?play=true");
+        browser.windowHandleMaximize();
     });  
 
     it('Audio player loads successfully when you open url', function() {
-           expect(radioPage.audioStatus).equal('Playing', 'Audio is not playing.');
+           expect(radioPage.audioStatus, 'Audio is not playing.').equal('Playing');
         });
 
 });

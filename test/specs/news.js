@@ -24,10 +24,14 @@ describe('News home page:', function() {
     });
 
     it('Verify content per articule justin page', function() {
-        for (var i=1; i<=newsPage.articlesSize; i++){
-            expect(newsPage.newsTitle(i)).to.be.true;
-            expect(newsPage.newsText(i)).to.be.true;
+        newsPage.justInClick();
+        for (var i=1; i<=newsPage.articules.length; i++){
+            expect(newsPage.newsTitle(i), "Title of articule number "+i+" is empty" ).to.not.be.empty;
+            expect(newsPage.newsDate(i), "Date of articule number "+i+" is not visible").to.not.be.empty;
+            expect(newsPage.newsText(i), "Text of articule number "+i+" is empty").to.not.be.empty;
+            
          }   
+
     });
 
     after(function () {
