@@ -1,6 +1,7 @@
 var page = require('./page');
 
 var radioPage = Object.create(page, { 
+  bodyRadio: {get: function () { return $('#radionational'); } },
 	programsButton: { get: function () { return $('.sf-with-ul'); } },
   programsButtonClick: { value: function() { this.programsButton.click(); }},
 	programMenu: { get: function () { return $("#rn-programindex > li:nth-child(2) a"); } }, 
@@ -17,7 +18,7 @@ var radioPage = Object.create(page, {
         }},
   lastProgram: { get: function(){ 
         var i = (this.programGuide.length)-1;
-        return $("#content > div.section.promo > div > div > div.on-air > ul > li:nth-child("+i+") > a > div > div.program");
+        return $("#content > div.section.promo > div > div > div.on-air > ul > li:nth-child("+i+") > div > div > h2 > a");
         }},
 
   inputSearch: { get: function () { return $('#search-simple-input-query'); } },	

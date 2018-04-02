@@ -11,13 +11,13 @@ describe('News home page:', function() {
     });  
 
     it('Page loaded successful', function() {
-        expect(newsPage.headNews.isVisible(3000)).to.be.true;
-        expect(newsPage.bodyNews.isVisible(3000)).to.be.true;
-        expect(newsPage.footerNews.isVisible(3000)).to.be.true;
+        expect(newsPage.headNews.isVisible());
+        expect(newsPage.bodyNews.isVisible());
+        expect(newsPage.footerNews.isVisible());
     });
    
     it('News banner is loaded', function() {
-        expect(newsPage.newsBanner.isVisible(3000));
+        expect(newsPage.newsBanner.isVisible());
     });
     
     it('Navigate to the ‘Just In’ page', function() {
