@@ -1,7 +1,7 @@
 var {expect} = require('chai');
 var radioPage = require('../../pageObjects/radioPage.js');
 
-describe('Social media share:', function() {
+describe('Social media page test:', function() {
     
     before(function () {
         browser.url("http://www.abc.net.au/radionational/programs/bigideas/a-fortunate-universe/8076406");
@@ -29,7 +29,6 @@ describe('Social media share:', function() {
         expect(popUpTitle).includes("twitter.com/");
         browser.close();
     });
-
 
     it('Click on Download Audio button redirect to the mp3 file', function() {
             browser.windowHandleMaximize();

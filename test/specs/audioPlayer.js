@@ -1,7 +1,7 @@
 var {expect} = require('chai');
 var radioPage = require('../../pageObjects/radioPage.js');
 
-describe('Audio Player', function() {
+describe('Audio Player test', function() {
  
     before(function () {
         browser.url("http://radio.abc.net.au/programitem/perDaAW7rD?play=true");

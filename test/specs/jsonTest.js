@@ -42,7 +42,4 @@ describe('Json key/value tests:', function() {
     it('Verify <service_airport_code> key/value:', function() {
         assert.isNull(json.data.service_airport_code, "<service_airport_code> not null");  
         }); 
-
-    after(function () {
-    }); 
 });

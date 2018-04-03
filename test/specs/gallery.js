@@ -2,7 +2,7 @@ var {expect} = require('chai');
 var galleryPage = require('../../pageObjects/newsPage.js');
 
 
-describe('Gallery page:', function() {
+describe('Gallery page test:', function() {
 	
 	before(function () {
 		browser.url("http://www.abc.net.au/news/2017-02-10/abc-open-pic-of-the-week/8256256");  
@@ -13,7 +13,4 @@ describe('Gallery page:', function() {
         galleryPage.gallery.waitForExist(3000);
         expect(galleryPage.galleryClass).include('active');        
     });
-
-    after(function () {
-    }); 
 });

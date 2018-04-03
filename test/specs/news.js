@@ -1,7 +1,7 @@
 var {expect} = require('chai');
 var newsPage = require('../../pageObjects/newsPage.js');
 
-describe('News home page:', function() {
+describe('News home page test:', function() {
 	
 	before(function () {
 		browser.url("http://www.abc.net.au/news/");
@@ -29,12 +29,7 @@ describe('News home page:', function() {
             expect(newsPage.newsTitle(i), "Title of articule number "+i+" is empty" ).to.not.be.empty;
             expect(newsPage.newsDate(i), "Date of articule number "+i+" is not visible").to.not.be.empty;
             expect(newsPage.newsText(i), "Text of articule number "+i+" is empty").to.not.be.empty;
-            
-         }   
-
+             }   
     });
-
-    after(function () {
-    }); 
 
 });

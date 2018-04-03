@@ -2,7 +2,7 @@ var {expect} = require('chai');
 var videoPage = require('../../pageObjects/newsPage.js');
 
 
-describe('Video test:', function() {
+describe('Video page test:', function() {
 	
 	before(function () {
 		browser.url("http://www.abc.net.au/news/2017-02-09/weatherill-promises-to-intervene-dramatically/8254908");  
@@ -13,7 +13,4 @@ describe('Video test:', function() {
         videoPage.video.waitForExist(3000);
         expect(videoPage.videoClass).equal('inline-content video article video-16x9');
     });
-
-    after(function () {
-    }); 
 });
