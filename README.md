@@ -41,7 +41,7 @@ npm test
 - What I would aply to solve this point is the TDD test strategy, you could install mocha-gherkin to do that.
   For example, in BDD the TDD is implemented with the keywords **Scenario Outline** outline and **Examples**.
   
-  [![Preview](https://prnt.sc/izzz7t)](https://prnt.sc/izzz7t)
+  [Preview](https://prnt.sc/izzz7t)
  
      Scenario Outline: Multiple programs 
             Given I have the server up and running
