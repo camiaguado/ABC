@@ -38,7 +38,7 @@ npm test
 
 
 ### Multiple programs scenario
-- What I would aply to solve this point is the TDD test strategy, you could install mocha-gherkin to do that.
+- What I would aply to solve this point is the TDD test strategy, you could install **mocha-gherkin** to do that.
   For example, in BDD the TDD is implemented with the keywords **Scenario Outline** outline and **Examples**.
   
   ![Multiple programs exercise](https://github.com/camiaguado/ABC/blob/master/test/multipleProgramsExercise.png?raw=true)
