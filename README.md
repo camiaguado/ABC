@@ -40,7 +40,8 @@ npm test
 ### Multiple programs scenario
 - What I would aply to solve this point is the TDD test strategy, you could install mocha-gherkin to do that.
   For example, in BDD the TDD is implemented with the keywords **Scenario Outline** outline and **Examples**.
-  
+  ![Image](https://prnt.sc/izzz7t "Multiprograms")
+ 
      Scenario Outline: Multiple programs 
             Given I have the server up and running
             When I access to the program "/programs/<programId>.json"
@@ -50,5 +51,8 @@ npm test
             | programId  | programType |
             | ppJj0E8g2R | Afternoons  |
             | ppxa2Amj2b | Mornings    |
+            
+            
+            
             
    Here the test is going to run through each row in the table Examples.
